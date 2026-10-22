@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>Host dashboard</title>
+<style>body{font-family:system-ui,sans-serif;background:#a8085f;color:#2a0620;margin:0;padding:14px}
+.box{background:#ffe81a;border:5px solid #1faa4a;padding:14px;max-width:1100px;margin:0 auto;box-shadow:6px 6px 0 #2a0620}
+h1{font-family:Impact,sans-serif;font-weight:400;color:#e0127a;margin:0 0 8px}
+input,button,a.b{font:inherit;padding:8px 12px;border:3px solid #2a0620;background:#fff}button,a.b{background:#ff8a1f;font-weight:700;cursor:pointer;color:#2a0620;text-decoration:none;display:inline-block}
+.w{overflow-x:auto}table{border-collapse:collapse;background:#fff;font-size:13px;margin:10px 0}td,th{border:2px solid #2a0620;padding:4px;text-align:left}
+#err{color:#b00020;font-weight:700}</style></head><body><div class="box">
+<h1>HOST DASHBOARD</h1>
+<div id="login"><input id="pw" type="password" placeholder="Admin password" autocomplete="current-password"> <button id="in">Sign in</button></div>
+<p id="err" role="alert"></p>
+<div id="dash" style="display:none"><p id="stats"></p><a class="b" href="/api/admin?format=csv">Download CSV</a>
+<div class="w"><table id="tb"></table></div></div></div>
+<script>
+const $=s=>document.querySelector(s);
+const cols=["guest_name","attendance_status","bringing_anyone","additional_guest_count","additional_guest_names","total_attendees","arrival_note","drink_preference","guest_message","updated_at"];
+async function load(){const r=await fetch("/api/admin");if(r.status===401)return false;if(!r.ok){$("#err").textContent="Could not load.";return true}
+ const {rows}=await r.json();$("#login").style.display="none";$("#dash").style.display="block";
+ const go=rows.filter(x=>x.attendance_status==="going").length,tot=rows.reduce((s,x)=>s+x.total_attendees,0);
+ $("#stats").textContent=rows.length?`${rows.length} RSVPs · ${go} going · ${rows.length-go} declined · ${tot} total attendees incl. plus-ones`:"No RSVPs yet. Share the link!";
+ const t=$("#tb");t.textContent="";const hr=t.insertRow();[...cols,""].forEach(c=>{const th=document.createElement("th");th.textContent=c;hr.appendChild(th)});
+ rows.forEach(x=>{const tr=t.insertRow();cols.forEach(c=>tr.insertCell().textContent=x[c]??"");
+  const b=document.createElement("button");b.textContent="Delete";b.onclick=async()=>{if(confirm("Delete "+x.guest_name+"?")){await fetch("/api/admin?id="+x.id,{method:"DELETE"});load()}};tr.insertCell().appendChild(b)});return true}
+$("#in").onclick=async()=>{$("#err").textContent="";const r=await fetch("/api/admin",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({password:$("#pw").value})});
+ if(r.ok)load();else $("#err").textContent=(await r.json()).error||"Failed."};
+load();
+</script></body></html>
