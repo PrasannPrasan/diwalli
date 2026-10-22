@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Diwali Ki Destruction · Prasann's House Party</title>
+<meta name="robots" content="noindex"><meta name="description" content="Diwali house party. 24 Oct, 7 PM till who knows. RSVP inside.">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Rozha+One&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#e0127a;--mag:#a8085f;--org:#ff8a1f;--yel:#ffe81a;--grn:#1faa4a;--pur:#6a3fc9;--ink:#2a0620;box-sizing:border-box;padding-top:env(saafe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--mag);color:var(--ink);font-family:Poppins,system-ui,sans-serif;font-weight:600;background-image:radial-gradient(var(--pink) 20%,transparent 21%);background-size:22px 22px}
+.wrap{max-width:720px;margin:0 auto;padding:14px}
+.frame{background:var(--yel);border:6px solid var(--grn);outline:4px solid var(--pur);outline-offset:3px;margin:22px 0;padding:6px;box-shadow:8px 8px 0 var(--ink)}
+.in{border:2px dashed var(--grn);padding:16px;position:relative;overflow:hidden}
+.pink{background:var(--pink);color:var(--yel)}.pink .in{border-color:var(--yel)}
+h1,h2{font-family:Anton,Impact,sans-serif;font-weight:400;margin:0;text-transform:uppercase;line-height:.95}
+h1{font-size:clamp(46px,14vw,100px);color:var(--org);-webkit-text-stroke:2px var(--ink);text-shadow:5px 5px 0 var(--yel);text-align:center}
+h2{font-size:clamp(28px,8vw,46px);color:var(--pink);-webkit-text-stroke:1px var(--ink);text-shadow:3px 3px 0 var(--grn)}
+.pink h2{color:var(--yel);text-shadow:3px 3px 0 var(--pur)}
+.hi{font-family:'Rozha One',serif;font-size:22px;text-align:center;color:var(--yel);background:var(--pur);display:inline-block;padding:2px 12px;border:3px solid var(--ink);transform:rotate(-2deg)}
+.tag{text-align:center;font-family:Anton;font-size:clamp(18px,5.5vw,30px);background:var(--ink);color:var(--yel);padding:8px;margin:14px -16px;letter-spacing:1px}
+.star{position:absolute;width:70px;height:70px;background:var(--org);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);animation:spin 9s linear infinite;opacity:.9}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.star{animation:none}}
+.btn{display:block;width:100%;font-family:Anton;font-size:28px;text-transform:uppercase;background:var(--org);color:var(--ink);border:4px solid var(--ink);padding:12px;box-shadow:5px 5px 0 var(--ink);cursor:pointer;text-align:center;text-decoration:none;margin-top:14px}
+.btn:hover{transform:translate(-2px,-2px);background:var(--yel)}.btn:disabled{opacity:.6;cursor:wait}
+.btn.sm{font-size:18px;padding:8px;display:inline-block;width:auto}
+.btn.loc{background:var(--grn);color:#fff;text-shadow:2px 2px 0 var(--ink)}.btn.loc:hover{background:var(--yel);color:var(--ink);text-shadow:none}
+.lockn{text-align:center;font-size:12px;margin:6px 0 0}
+.drip{background:var(--pur)}.drip .in{border-color:var(--yel)}
+.drip h2{color:var(--yel);text-shadow:3px 3px 0 var(--pink)}
+.drip p.lead{color:#fff;font-size:17px;margin:12px 0}
+.badge{display:block;width:fit-content;max-width:100%;margin:16px auto;background:var(--org);color:var(--ink);font-family:Anton;font-size:clamp(20px,6vw,32px);text-transform:uppercase;text-align:center;padding:10px 22px;border:4px solid var(--ink);box-shadow:6px 6px 0 var(--yel);transform:rotate(-2.5deg);letter-spacing:1px;animation:wob 3s ease-in-out infinite}
+@keyframes wob{50%{transform:rotate(2deg)}}
+@media(prefers-reduced-motion:reduce){.badge{animation:none}}
+.drip ul{margin:8px 0 0;padding-left:20px;font-size:14px}.drip li{margin:5px 0}
+.dgrid{display:grid;gap:12px}@media(min-width:600px){.dgrid{grid-template-columns:1fr 1fr}}
+label,legend{font-weight:800;display:block;margin:14px 0 6px;font-size:15px}
+input[type=text],input[type=number],textarea{width:100%;font:inherit;padding:10px;border:3px solid var(--ink);background:#fff;color:var(--ink)}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts label{margin:0;cursor:pointer}.opts input{position:absolute;opacity:0}
+.opts span{display:inline-block;padding:8px 14px;border:3px solid var(--ink);background:#fff;font-size:14px}
+.opts input:checked+span{background:var(--pink);color:var(--yel);box-shadow:3px 3px 0 var(--ink)}
+.opts input:focus-visible+span{outline:3px solid var(--pur)}
+fieldset{border:0;padding:0;margin:0}
+.err{color:#fff;background:#b00020;padding:6px 10px;margin-top:6px;font-size:14px;display:none}
+.grid{display:grid;gap:12px}
+@media(min-width:600px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.card{background:#fff;border:3px solid var(--ink);padding:12px;font-size:14px}
+.card b{font-family:Anton;font-size:20px;color:var(--pink);display:block;font-weight:400;text-transform:uppercase}
+#cd{font-family:Anton;font-size:26px;text-align:center}
+table{width:100%;border-collapse:collapse;font-size:13px;background:#fff}td,th{border:2px solid var(--ink);padding:4px;text-align:left}
+.wide{overflow-x:auto}
+</style></head><body><div class="wrap">
+
+<div class="frame"><div class="in">
+<div class="star" style="top:-10px;left:-10px"></div><div class="star" style="bottom:-10px;right:-10px;background:var(--pink)"></div>
+<div style="text-align:center"><span class="hi">दीवाली हाउस पार्टी</span></div>
+<h1>Diwali ki destruction</h1>
+<div class="tag">24 OCT · 7 PM TILL WHO KNOWS</div>
+<p style="text-align:center;margin:0 0 6px">Questionable dance moves, good people, aggressively bright lights, and enough chaos for the group chat. Hosted by <b>Prasann</b>. Venue: <b>My flat</b>.</p>
+<p id="cd" aria-live="polite"></p>
+<a class="btn loc" id="loc-hero" href="#rsvp" data-locked="1">LOCATION &amp; DIRECTIONS ↗</a>
+<p class="lockn" id="loc-note">Private flat, so the location unlocks right after you RSVP.</p>
+<a class="btn" href="#rsvp">RSVP karo, yaar →</a>
+</div></div>
+
+<div class="frame pink"><div class="in"><h2>The rules (read them)</h2><div class="grid" style="margin-top:14px;color:var(--ink)">
+<div class="card"><b>The Food Economy</b>We order. We split. Nobody starts a financial investigation over one extra naan.</div>
+<div class="card"><b>Bring your own drama</b>BYOB. Bring whatever you want to drink. Alcohol is not provided by the host.</div>
+<div class="card"><b>Plus ones? Bring your people.</b>Got someone to bring? They're welcome too. Just tell me how many people are coming.</div>
+<div class="card" style="grid-column:1/-1"><b>Where? My flat.</b>Exact location unlocks after you RSVP.<a class="btn loc" id="loc-card" href="#rsvp" data-locked="1">LOCATION &amp; DIRECTIONS ↗</a><p class="lockn" id="loc-card-note">Unlocks after RSVP.</p></div>
+</div></div></div>
+
+<div class="frame drip" id="dresscode"><div class="in">
+<h2>Drip code: desi but make it slay ✨</h2>
+<p class="lead">Ethnic fits, Indo-western drip, kurtas, lehengas, sarees, fusion fits — serve Diwali main-character energy. 💅</p>
+<span class="badge">Festive drip only. No boring fits.</span>
+<div class="card"><b>The vibe check</b>Look festive. Look expensive (even if you're financially recovering). Come dressed like the family WhatsApp group is about to ask for your photos.</div>
+<div class="dgrid" style="margin-top:12px">
+<div class="card"><b>Outfit inspo</b><ul>
+<li>Traditional fits with a fresh Gen-Z twist</li>
+<li>Indo-western outfits and fusion wear</li>
+<li>Kurtas, co-ord sets, sarees, lehengas, and festive dresses</li>
+<li>Statement accessories, jhumkas, rings, and your best festive drip</li></ul></div>
+<div class="card"><b>The rules (chill ones)</b><ul>
+<li>Dress festive, however you interpret it.</li>
+<li>No strict traditional-only requirement.</li>
+<li>Wear something you feel confident and comfortable in.</li>
+<li>No mandatory colour or outfit purchase. Re-wear it, borrow it, remix it.</li></ul></div>
+</div>
+</div></div>
+
+<div class="frame" id="rsvp"><div class="in">
+<h2>Are you in?</h2>
+<form id="f" novalidate>
+<label for="n">Full name</label><input type="text" id="n" maxlength="80" autocomplete="name">
+<div class="err" id="e-n">Please enter your name.</div>
+<fieldset><legend>Coming?</legend><div class="opts">
+<label><input type="radio" name="att" value="going"><span>Haan, I'm coming</span></label>
+<label><input type="radio" name="att" value="declined"><span>Can't make it</span></label></div>
+<div class="err" id="e-att">Pick one.</div></fieldset>
+<label for="arr">Arrival: flexible, so tell me roughly when (optional)</label><input type="text" id="arr" maxlength="80" placeholder="after 8ish">
+<fieldset><legend>Drinks</legend><div class="opts">
+<label><input type="radio" name="dr" value="alcoholic"><span>Alcoholic</span></label>
+<label><input type="radio" name="dr" value="non-alcoholic"><span>Non-alcoholic</span></label>
+<label><input type="radio" name="dr" value="both"><span>Both</span></label></div>
+<div class="err" id="e-dr">Pick one.</div></fieldset>
+<fieldset><legend>Are you bringing anyone?</legend><div class="opts">
+<label><input type="radio" name="po" value="no"><span>No</span></label>
+<label><input type="radio" name="po" value="yes"><span>Yes</span></label></div>
+<div class="err" id="e-po">Pick one.</div></fieldset>
+<div id="extra" style="display:none">
+<label for="cnt">Number of additional guests</label><input type="number" id="cnt" min="1" step="1" inputmode="numeric">
+<div class="err" id="e-cnt">Enter a whole number, 1 or more.</div>
+<label for="xn">Names of additional guests (optional)</label><input type="text" id="xn" maxlength="300" placeholder="Riya, Kabir">
+</div>
+<label for="m">Message to Prasann (optional)</label><textarea id="m" rows="3" maxlength="400"></textarea>
+<button class="btn" id="go" type="submit">Lock it in</button>
+<div class="err" id="e-sub" role="alert"></div>
+</form>
+<div id="ok" style="display:none"><h2 id="okh"></h2><p id="okp"></p><a class="btn loc" id="loc-ok" style="display:none" href="#rsvp" data-locked="1">LOCATION &amp; DIRECTIONS ↗</a><p class="err" id="oknote"></p></div>
+</div></div>
+
+
+<p style="text-align:center;color:var(--yel);font-size:13px">विदाई पक्की! · Made with questionable judgement</p>
+</div>
+<script>
+const PARTY=new Date("2026-10-24T19:00:00+05:30");
+const $=s=>document.querySelector(s);
+function tick(){const d=PARTY-new Date(),el=$("#cd");
+ if(d>0){const h=Math.floor(d/36e5),m=Math.floor(d%36e5/6e4);el.textContent=h>=48?`${Math.floor(h/24)} days to go`:`${h}h ${m}m to go`}
+ else if(d>-864e5)el.textContent="IT'S HAPPENING. COME NOW.";
+ else el.textContent="The party's over. Hope it was a story."}
+tick();setInterval(tick,3e4);
+const val=n=>(document.querySelector(`input[name=${n}]:checked`)||{}).value;
+document.addEventListener("change",e=>{if(e.target.name==="po"||e.target.name==="att")$("#extra").style.display=val("att")==="going"&&val("po")==="yes"?"block":"none"});
+function unlock(u){if(typeof u!=="string")return false;
+ for(const id of ["loc-hero","loc-card","loc-ok"]){const a=$("#"+id);a.href=u;a.target="_blank";a.rel="noopener noreferrer";a.style.display="";a.dataset.locked="0"}
+ $("#loc-note").style.display="none";$("#loc-card-note").style.display="none";return true}
+const KEY="diwali_rsvp";
+function stored(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return{}}}
+$("#f").addEventListener("submit",async ev=>{
+ ev.preventDefault();let bad=false;
+ const chk=(id,ok)=>{$("#"+id).style.display=ok?"none":"block";if(!ok)bad=true};
+ const name=$("#n").value.trim(),going=val("att")==="going",cnt=$("#cnt").value.trim(),n=Number(cnt),yes=going&&val("po")==="yes";
+ chk("e-n",name.length>0);chk("e-att",!!val("att"));chk("e-dr",!!val("dr"));chk("e-po",!going||!!val("po"));
+ chk("e-cnt",!yes||(/^\d+$/.test(cnt)&&n>=1&&Number.isSafeInteger(n)));
+ $("#e-sub").style.display="none";if(bad)return;
+ const btn=$("#go");btn.disabled=true;btn.textContent="Saving…";
+ try{
+  const s=stored();
+  const r=await fetch("/api/rsvp",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({
+   guest_name:name,attendance_status:val("att"),arrival_note:$("#arr").value.trim(),drink_preference:val("dr"),
+   bringing_anyone:going?val("po"):"no",additional_guest_count:yes?n:0,additional_guest_names:$("#xn").value.trim(),
+   guest_message:$("#m").value.trim(),id:s.id,token:s.token})});
+  const j=await r.json().catch(()=>({}));
+  if(!r.ok||!j.ok)throw new Error(j.error||"Couldn't save your RSVP. Please try again.");
+  try{localStorage.setItem(KEY,JSON.stringify({id:j.id,token:j.token}))}catch(e){}
+  $("#f").style.display="none";$("#ok").style.display="block";
+  const first=name.split(" ")[0];
+  if(going){$("#okh").textContent=`${first}, you're on the list!`;
+   $("#okp").textContent=`Saved: you${yes?` + ${n} more`:""} = ${j.total_attendees} ${j.total_attendees===1?"person":"people"}. Get directions below.`;
+   if(!unlock(j.maps_url)){const k=$("#oknote");k.textContent="Saved, but the location couldn't load. Please ask Prasann.";k.style.display="block"}}
+  else{$("#okh").textContent=`Noted, ${first}.`;$("#okp").textContent="Saved. Next party, then. Reload and resubmit if plans change."}
+ }catch(e){const x=$("#e-sub");x.textContent=e.message;x.style.display="block";btn.disabled=false;btn.textContent="Lock it in"}
+});
+</script></body></html>
